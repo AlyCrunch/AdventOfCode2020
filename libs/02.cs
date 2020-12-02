@@ -21,14 +21,7 @@ namespace Days
             => SecondParser(pwd.Min, pwd.Max, pwd.Policy, pwd.Password);
 
         public static int ValidPasswordsInArray(Func<PasswordEntry, bool> Parser, IEnumerable<string[]> passwords)
-        {
-            int validPasswords = 0;
-            foreach (var pwd in passwords)
-                if (Parser(PasswordEntry.StringArrToEntry(pwd)))
-                    validPasswords++;
-
-            return validPasswords;
-        }
+            => passwords.Count(pwd => Parser(PasswordEntry.StringArrToEntry(pwd)));
 
         public static string OutputFirst()
         {
@@ -46,5 +39,4 @@ namespace Days
             return ValidPasswordsInArray(SecondParser, entries).ToString();
         }
     }
-
 }
