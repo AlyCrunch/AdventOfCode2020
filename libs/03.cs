@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace Days
@@ -45,7 +43,6 @@ namespace Days
             => smpl.Select(y => y.Select(x => (x == '#') ? byte.MaxValue : byte.MinValue)
                                  .ToArray())
                    .ToArray();
-
 
         public static string OutputFirst()
         {

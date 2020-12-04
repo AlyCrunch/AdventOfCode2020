@@ -19,7 +19,7 @@ namespace Tests
         public void ParserExample()
         {
             var pwdStr = Days.PasswordPhilosophy.SplitEntry(example[0]);
-            var password = Helpers.PasswordEntry.StringArrToEntry(pwdStr);
+            var password = Days.Objects.PasswordEntry.StringArrToEntry(pwdStr);
 
             Assert.Equal(1, password.Min);
             Assert.Equal(3, password.Max);
