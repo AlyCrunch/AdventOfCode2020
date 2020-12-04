@@ -1,0 +1,23 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout source 📡
+        uses: actions/checkout@v2
+      - name: Setup .NET 🚚
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1
+      - name: Restore 👷‍♀️
+        run: dotnet restore
+      - name: Build 👩‍🔧
+        run: dotnet build
+      - name: Test 👩‍🏫
+        run: dotnet test
+      - name: Run 👩‍🚀
+        run: .\AdventOfCode.exe
+        working-directory: .\AdventOfCode2020\bin\Debug\netcoreapp3.1
