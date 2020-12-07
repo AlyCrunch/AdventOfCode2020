@@ -1,4 +1,4 @@
-name: Test
+name: Continuous Integration 👮‍♀️
 
 on: [push]
 
