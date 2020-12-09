@@ -65,5 +65,10 @@ namespace Days
 
             return new Tuple<bool, int>(index >= inst.Length, acc);
         }
+
+        public static string OutputFirst()
+            => GetAccumulator(Helpers.ReadFile("inputs\\08.txt")).ToString();
+        public static string OutputSecond()
+            => GetAccumulatorUncorrupted(Helpers.ReadFile("inputs\\08.txt")).ToString();
     }
 }
